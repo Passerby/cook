@@ -1,0 +1,24 @@
+= form_for :order, class: "form-horizontal container", url: '/orders', method: :post do |f|
+  .form-group
+    label.col-sm-2.control-label for="number" 用餐人数
+    .col-sm-10
+      input type="number" name="number" class="form-control" min="1" placeholder="不少于1人"
+  .form-group
+    label.col-sm-2.control-label for="level" 档次选择
+    .col-sm-10
+      select.form-control name="level"
+        option A档次（30元一人）
+        option B档次（40元一人）
+        option C档次（50元一人）
+  .form-group
+    label.col-sm-2.control-label for="time" 时间
+    .col-sm-10
+      input.form-control type="datetime" name="time" placeholder="至少提前一天下单"
+  .form-group
+    label.col-sm-2.control-label for="notes" 备注
+    .col-sm-10
+      input.form-control type="z" name="notes" rows="3" placeholder="写下您喜欢的口味或者忌口的食物"
+
+  .form-group
+    a.btn.btn-default.button-submit role="button" href="/" 等下再说
+    button.btn.btn-primary.pull-right.button-submit tpye="submit" 快下单

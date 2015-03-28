@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    return redirect_to action: 'pay'
+    return redirect_to action: 'pay', params: params
   end
 
   def pay

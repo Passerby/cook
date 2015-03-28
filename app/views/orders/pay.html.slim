@@ -1,5 +1,30 @@
+h2 订单确认
 .container
-  h1 选择您的支付方式
+  table
+    tr
+      th 用餐人数：
+      td = params[:number]
+    tr
+      th 档次选择：
+      td = "#{ params[:level] }元/人"
+    tr
+      th 时间：
+      td = params[:time]
+    tr
+      th 地址：
+      td = params[:address]
+    tr
+      th 电话：
+      td = params[:cellphone]
+    tr
+      th 备注：
+      td = params[:notes]
+    tr
+      th 总计：
+      td = "#{ params[:number].to_i * params[:level].to_i }元"
+
+.container
+  h4 选择您的支付方式：
   .pay
     a.btn.btn-success.btn-lg.btn-block href="/orders/success" 微信
   .pay

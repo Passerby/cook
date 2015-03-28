@@ -8,4 +8,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :cook do
+    collection do
+      get 'detail'
+      get 'success'
+    end
+  end
 end

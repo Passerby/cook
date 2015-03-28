@@ -6,14 +6,11 @@
   .form-group
     label.col-sm-2.control-label for="level" 档次选择
     .col-sm-10
-      select.form-control name="level"
-        option value="30" A档次（30元一人）
-        option value="40" B档次（40元一人）
-        option value="50" C档次（50元一人）
+      input type="number" name="level" class="form-control" min="30" placeholder="不少于30元"
   .form-group
     label.col-sm-2.control-label for="time" 时间
     .col-sm-10
-      input.form-control type="datetime" name="time" placeholder="至少提前一天下单"
+      input#datetimepicker1.form-control type="datetime" name="time" placeholder="至少提前一天下单"
   .form-group
     label.col-sm-2.control-label for="address" 地址
     .col-sm-10
@@ -30,3 +27,8 @@
   .form-group
     a.btn.btn-default.button-submit role="button" href="/" 等下再说
     button.btn.btn-primary.pull-right.button-submit tpye="submit" 快下单
+
+javascript:
+  $(function () {
+    $('#datetimepicker1').datetimepicker();
+  });

@@ -7,13 +7,21 @@
     label.col-sm-2.control-label for="level" 档次选择
     .col-sm-10
       select.form-control name="level"
-        option A档次（30元一人）
-        option B档次（40元一人）
-        option C档次（50元一人）
+        option value="30" A档次（30元一人）
+        option value="40" B档次（40元一人）
+        option value="50" C档次（50元一人）
   .form-group
     label.col-sm-2.control-label for="time" 时间
     .col-sm-10
       input.form-control type="datetime" name="time" placeholder="至少提前一天下单"
+  .form-group
+    label.col-sm-2.control-label for="address" 地址
+    .col-sm-10
+      input.form-control type="text" name="address" placeholder="详细地址"
+  .form-group
+    label.col-sm-2.control-label for="cellphone" 电话
+    .col-sm-10
+      input.form-control type="text" name="cellphone" placeholder="接单联系"
   .form-group
     label.col-sm-2.control-label for="notes" 备注
     .col-sm-10
